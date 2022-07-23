@@ -2,7 +2,7 @@
   "Actions": [
     {
       "Icon": "images/action1.icon",
-      "Name": "Your first action",
+      "Name": "Boss Tracker",
       "States": [
         {
           "Image": "images/action1.key",
@@ -12,11 +12,11 @@
       ],
       "SupportedInMultiActions": false,
       "Tooltip": "",
-      "UUID": "reverse.dns.formatted.namespace.action"
+      "UUID": "com.sauravisus.bdobosstracker.bosstimer"
     }
   ],
   "SDKVersion": 2,
-  "Author": "your name",
+  "Author": "Sauravisus",
   "CodePath": "plugin.html",
   "PropertyInspectorPath": "propertyinspector.html",
   "Name": "streamdeck template",
