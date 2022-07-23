@@ -1,9 +1,9 @@
 {
-  "name": "@rweich/streamdeck-ts-template",
+  "name": "@alexhaible/bdo-boss-timer-for-stream-deck",
   "version": "0.0.0-development",
-  "description": "a template to create streamdeck plugins in typescript",
+  "description": "A Stream Deck plugin that shows the next world boss in Black Desert Online",
   "private": true,
-  "author": "rweich",
+  "author": "Sauravisus",
   "license": "MIT",
   "scripts": {
     "build": "yarn clean && webpack --mode=development",
@@ -55,8 +55,8 @@
   "engines": {
     "node": ">=14.17"
   },
-  "repository": "rweich/streamdeck-ts-template",
-  "bugs": "https://github.com/rweich/streamdeck-ts-template/issues",
+  "repository": "AlexHaible/BDO-Boss-Timer-for-Stream-Deck",
+  "bugs": "https://github.com/AlexHaible/BDO-Boss-Timer-for-Stream-Deck/issues",
   "commitlint": {
     "extends": [
       "@commitlint/config-conventional"
