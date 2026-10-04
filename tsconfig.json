@@ -1,25 +1,22 @@
 {
+  "extends": "@tsconfig/node20/tsconfig.json",
   "compilerOptions": {
-    /* Visit https://aka.ms/tsconfig.json to read more about this file */
-    "target": "esnext",
-    "module": "commonjs",
-    "declaration": false,
-    "strict": true,
-    "noImplicitAny": true,
-    "strictNullChecks": true,
-    "strictFunctionTypes": true,
-    "strictBindCallApply": true,
-    "strictPropertyInitialization": true,
-    "noImplicitThis": true,
-    "alwaysStrict": true,
-    "noImplicitReturns": true,
-    "moduleResolution": "node",
-    "allowSyntheticDefaultImports": true,
-    "esModuleInterop": true,
-    "sourceMap": true,
-    "skipLibCheck": true,
-    "forceConsistentCasingInFileNames": true,
-    "resolveJsonModule": true,
-    "noEmit": true
-  }
+    "customConditions": [
+      "node"
+    ],
+    "module": "ES2022",
+    "moduleResolution": "Bundler",
+    "noImplicitOverride": true
+  },
+  "include": [
+    "src/**/*.ts",
+    "test/**/*.ts"
+  ],
+  "exclude": [
+    "node_modules",
+    // Legacy files from the previous webpack-based template; not part of the build.
+    "src/Plugin.ts",
+    "src/Propertyinspector.ts",
+    "src/Settings.ts"
+  ]
 }

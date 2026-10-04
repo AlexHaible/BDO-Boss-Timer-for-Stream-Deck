@@ -2,3 +2,7 @@
 /node_modules/
 
 /dist
+
+# Stream Deck files
+*.sdPlugin/bin
+*.sdPlugin/logs

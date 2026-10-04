@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+
+<head lang="en">
+  <title>Next World Boss Settings</title>
+  <meta charset="utf-8" />
+  <script src="https://sdpi-components.dev/releases/v4/sdpi-components.js"></script>
+</head>
+
+<body>
+  <!--
+    Learn more about property inspector components at https://sdpi-components.dev/docs/components
+    Values here must match the ids in src/schedules/index.ts (regions) and src/bosses.ts (bosses).
+  -->
+  <sdpi-item label="Region">
+    <sdpi-select setting="region" default="eu">
+      <option value="eu">Europe (EU)</option>
+      <option value="na">North America (NA)</option>
+    </sdpi-select>
+  </sdpi-item>
+
+  <sdpi-item label="Alert">
+    <sdpi-select setting="alertMinutes" default="15">
+      <option value="0">Off</option>
+      <option value="1">1 minute before</option>
+      <option value="5">5 minutes before</option>
+      <option value="10">10 minutes before</option>
+      <option value="15">15 minutes before</option>
+      <option value="30">30 minutes before</option>
+      <option value="60">1 hour before</option>
+    </sdpi-select>
+  </sdpi-item>
+
+  <sdpi-item label="Show">
+    <sdpi-select setting="display" default="countdown">
+      <option value="countdown">Countdown</option>
+      <option value="time">Spawn time</option>
+      <option value="both">Countdown + spawn time</option>
+    </sdpi-select>
+  </sdpi-item>
+
+  <sdpi-item label="Bosses">
+    <sdpi-checkbox-list id="bosses" setting="bosses" columns="2">
+      <option value="kzarka">Kzarka</option>
+      <option value="nouver">Nouver</option>
+      <option value="kutum">Kutum</option>
+      <option value="karanda">Karanda</option>
+      <option value="offin">Offin</option>
+      <option value="garmoth">Garmoth</option>
+      <option value="vell">Vell</option>
+      <option value="quint">Quint</option>
+      <option value="muraka">Muraka</option>
+      <option value="uturi">Uturi</option>
+      <option value="bulgasal">Bulgasal</option>
+      <option value="sangoon">Sangoon</option>
+      <option value="goldenPigKing">Golden Pig King</option>
+      <option value="blackShadow">Black Shadow</option>
+      <option value="tributeWagon">Tribute Wagon</option>
+    </sdpi-checkbox-list>
+  </sdpi-item>
+
+  <sdpi-item>
+    <sdpi-button id="select-all">Select all</sdpi-button>
+    <sdpi-button id="select-none">Select none</sdpi-button>
+  </sdpi-item>
+
+  <sdpi-item>
+    <p class="hint">
+      The key shows the next spawn that includes at least one selected boss; other bosses spawning at the
+      same time are shown dimmed. Press the key to page through later spawns. Spawn times are shown in your
+      computer's time zone.
+    </p>
+  </sdpi-item>
+
+  <style>
+    .hint {
+      color: #9a9a9a;
+      font-size: 9pt;
+      line-height: 1.4;
+      margin: 0;
+    }
+  </style>
+
+  <script>
+    const bossList = document.getElementById("bosses");
+    const allBosses = () => Array.from(bossList.querySelectorAll("option"), (option) => option.value);
+
+    // Assigning the value persists it to the action's settings.
+    document.getElementById("select-all").addEventListener("click", () => (bossList.value = allBosses()));
+    document.getElementById("select-none").addEventListener("click", () => (bossList.value = []));
+  </script>
+</body>
+
+</html>

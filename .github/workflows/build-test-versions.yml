@@ -7,19 +7,18 @@ jobs:
 
     runs-on: ubuntu-latest
 
-    strategy:
-      matrix:
-        node-version: [ 14.x, 16.x, 17.x ]
-        # See supported Node.js release schedule at https://nodejs.org/en/about/releases/
-
     steps:
-      - uses: actions/checkout@v2
-      - name: Use Node.js ${{ matrix.node-version }}
-        uses: actions/setup-node@v2
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
         with:
-          node-version: ${{ matrix.node-version }}
-      - run: yarn install
-      - run: yarn type-check
-      - run: yarn lint
-      - run: yarn build-prod
-      - run: yarn set-plugin-version 0.0.0
+          node-version: 24
+          cache: npm
+      - run: npm ci
+      - run: npm run type-check
+      - run: npm test
+      - run: npm run validate
+      - run: npm run pack
+      - uses: actions/upload-artifact@v4
+        with:
+          name: com.sauravisus.bdobosstracker.streamDeckPlugin
+          path: dist/com.sauravisus.bdobosstracker.streamDeckPlugin

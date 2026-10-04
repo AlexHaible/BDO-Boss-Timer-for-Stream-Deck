@@ -1,0 +1,49 @@
+{
+  "Name": "BDO Boss Timer",
+  "Version": "1.0.0.0",
+  "Author": "Sauravisus",
+  "Actions": [
+    {
+      "Name": "Next World Boss",
+      "UUID": "com.sauravisus.bdobosstracker.bosstimer",
+      "Icon": "imgs/actions/next-boss/icon",
+      "Tooltip": "Shows the next Black Desert Online world boss and a countdown to its spawn.",
+      "PropertyInspectorPath": "ui/next-boss.html",
+      "SupportedInMultiActions": false,
+      "Controllers": [
+        "Keypad"
+      ],
+      "States": [
+        {
+          "Image": "imgs/actions/next-boss/key",
+          "ShowTitle": false,
+          "TitleAlignment": "bottom"
+        }
+      ]
+    }
+  ],
+  "Category": "BDO Boss Timer",
+  "CategoryIcon": "imgs/plugin/category-icon",
+  "CodePath": "bin/plugin.js",
+  "Description": "Shows the next upcoming Black Desert Online world boss, with a countdown and an alert for the bosses you care about.",
+  "Icon": "imgs/plugin/marketplace",
+  "SDKVersion": 3,
+  "Software": {
+    "MinimumVersion": "7.1"
+  },
+  "OS": [
+    {
+      "Platform": "mac",
+      "MinimumVersion": "12"
+    },
+    {
+      "Platform": "windows",
+      "MinimumVersion": "10"
+    }
+  ],
+  "Nodejs": {
+    "Version": "24",
+    "Debug": "enabled"
+  },
+  "UUID": "com.sauravisus.bdobosstracker"
+}
