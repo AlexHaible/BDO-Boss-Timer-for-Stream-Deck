@@ -29,8 +29,7 @@ const config = {
     },
     typescript({
       mapRoot: isWatching ? "./" : undefined,
-      include: ["src/**/*.ts"],
-      exclude: ["src/Plugin.ts", "src/Propertyinspector.ts", "src/Settings.ts"]
+      include: ["src/**/*.ts"]
     }),
     nodeResolve({
       browser: false,
