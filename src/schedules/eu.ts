@@ -9,7 +9,7 @@ import type { RegionSchedule } from "./types";
 export const eu: RegionSchedule = {
   name: "EU",
   timeZone: "Europe/Berlin",
-  source: "garmoth.com/boss-timer (EU), October 2026",
+  source: "garmoth.com/boss-timer (EU), checked against the site on 2026-10-04",
   week: {
     monday: {
       "00:15": ["uturi", "kutum"],
@@ -63,7 +63,6 @@ export const eu: RegionSchedule = {
       "02:00": ["uturi", "offin"],
       "12:00": ["goldenPigKing", "nouver"],
       "14:00": ["garmoth"],
-      "16:00": ["blackShadow"],
       "19:00": ["sangoon", "karanda"],
     },
     sunday: {
