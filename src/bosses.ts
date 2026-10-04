@@ -18,8 +18,6 @@ export const BOSSES = {
   bulgasal: { name: "Bulgasal", short: "Bulgasal", icon: undefined, color: "#9a2f6a" },
   sangoon: { name: "Sangoon", short: "Sangoon", icon: undefined, color: "#3a4f9a" },
   goldenPigKing: { name: "Golden Pig King", short: "Pig King", icon: undefined, color: "#c9a227" },
-  blackShadow: { name: "Black Shadow", short: "B. Shadow", icon: undefined, color: "#3a3a3a" },
-  tributeWagon: { name: "Tribute Wagon", short: "Wagon", icon: undefined, color: "#7a6a4a" },
 } as const satisfies Record<string, Boss>;
 
 export type Boss = {

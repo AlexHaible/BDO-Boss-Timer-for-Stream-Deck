@@ -9,7 +9,7 @@ import type { RegionSchedule } from "./types";
 export const na: RegionSchedule = {
   name: "NA",
   timeZone: "America/Los_Angeles",
-  source: "garmoth.com/boss-timer (NA), October 2026",
+  source: "garmoth.com/boss-timer (NA), checked against the site on 2026-10-04",
   week: {
     monday: {
       "00:00": ["goldenPigKing", "kzarka"],
@@ -62,8 +62,6 @@ export const na: RegionSchedule = {
       "00:00": ["bulgasal", "nouver"],
       "10:00": ["uturi", "kzarka"],
       "12:00": ["garmoth"],
-      "14:00": ["blackShadow"],
-      "16:00": ["tributeWagon"],
       "17:00": ["quint", "muraka"],
       "22:15": ["goldenPigKing", "kutum"],
     },
